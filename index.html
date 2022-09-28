@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <a href='tpoutside://pull.activity?param={"Protocol":"ScanProtocol","version":"v1.0","blockchain":"eos","from":"aaaaaa123451","to":"cbzfb4a5s5zv","amount":"0.0001","contract":"eosio.token","symbol":"EOS","precision":"4","action":"transfer","memo":"test transfer from page"}'>Open TokenPocket to transfer eos</a><br/>
+  <p id="message"></p>
+  <script>
+    var btn = document.querySelector('#btn');
+    var message = document.querySelector('#message');
+    var count = 1;
+    var key = null;
+
+    function start() {
+      clearInterval(key);
+      key = setInterval(() => {
+        count++;
+        message.innerText = count;
+      }, 2000);
+    }
+
+    start();
+  </script>
+</body>
+
+</html>
